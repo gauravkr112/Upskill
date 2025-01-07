@@ -1,0 +1,12 @@
+variable "cidr_block" {}
+variable "vpc_name" {}
+variable "public_subnet_cidr" {}
+variable "private_subnet_cidr" {}
+variable "public_subnet_az" {}
+variable "private_subnet_az" {}
+variable "public_subnet_name" {}
+variable "private_subnet_name" {}
+variable "igw_name" {}
+variable "nat_gateway_name" {}
+variable "public_rtb_name" {}
+variable "private_rtb_name" {}
