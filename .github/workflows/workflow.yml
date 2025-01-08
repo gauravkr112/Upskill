@@ -11,17 +11,16 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Set up Terraform
       uses: hashicorp/setup-terraform@v1
 
-    - name: Configure AWS Credentials using the OIDC
-      run: |
-        aws sts get-caller-identity
-      env:
-        AWS_ROLE_ARN: arn:aws:iam::551034314098:role/GithubAccessRole
-        AWS_REGION: eu-west-1
+    - name: Configure AWS credentials from OIDC
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          role-to-assume: arn:aws:iam::551034314098:role/GithubAccessRole
+          aws-region: eu-west-1
     - name: Terraform Init
       run: terraform init
 
