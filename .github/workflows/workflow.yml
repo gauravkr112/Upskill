@@ -21,7 +21,7 @@ jobs:
         aws sts get-caller-identity
       env:
         AWS_ROLE_ARN: arn:aws:iam::551034314098:role/GithubAccessRole
-        AWS_REGION: us-west-2
+        AWS_REGION: eu-west-1
     - name: Terraform Init
       run: terraform init
 
