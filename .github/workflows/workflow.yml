@@ -17,7 +17,7 @@ jobs:
       uses: hashicorp/setup-terraform@v1
 
     - name: Configure AWS credentials from OIDC
-        uses: aws-actions/configure-aws-credentials@v2
+      uses: aws-actions/configure-aws-credentials@v2
         with:
           role-to-assume: arn:aws:iam::551034314098:role/GithubAccessRole
           aws-region: eu-west-1
